@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ReactChildren } from 'react';
 import './Person.css';
 import _ from 'lodash';
 
-export interface PersonProps {
+export type PersonProps = {
     id: string,
     name: string;
     age: number;
-    click?: (n: string | PersonProps) => void;
+    click?: (n: string) => void;
     changed?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    children?: any;
+    children?: ReactChildren;
 }
 
 const person = (props: PersonProps) => {
